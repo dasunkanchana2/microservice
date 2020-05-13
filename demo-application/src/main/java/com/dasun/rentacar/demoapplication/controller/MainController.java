@@ -14,12 +14,12 @@ public class MainController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String greeting() {
-        return "Hello Spring Boot!!!";
+        return "Hello Spring Boot from GET!!!";
     }
 
     @RequestMapping(value = "/hello", method = RequestMethod.POST)
     public String greeting2() {
-        return "Hello Spring Boot from post!!!";
+        return "Hello Spring Boot from POST!!!";
     }
 
 
