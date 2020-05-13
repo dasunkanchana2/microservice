@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
 
     @RequestMapping("/")
-    public String greeting(){
+    public String greeting() {
         return "<h1>Welcome to game changing framework .... Spring Boot!!!</h1>";
     }
 }
