@@ -1,0 +1,25 @@
+{
+  "categories": [
+    {
+      "id": 2007,
+      "name": "Baby & Infant",
+      "description": "baby & infant",
+      "long_description": null,
+      "active": true,
+      "active_start_date": null,
+      "active_end_date": null,
+      "archived": null
+    }
+  ]
+}
+
+{
+  "id": 2000,
+  "name": "Home",
+  "description": "Home",
+  "long_description": null,
+  "active": true,
+  "active_start_date": null,
+  "active_end_date": null,
+  "archived": null
+}
