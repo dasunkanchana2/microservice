@@ -1,4 +1,6 @@
-spring:
-  cloud:
-    config:
-      uri: http://localhost:8191
+#Config server - prod
+
+#spring:
+#  cloud:
+#    config:
+#      uri: http://localhost:8191

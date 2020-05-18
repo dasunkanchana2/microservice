@@ -1,7 +1,31 @@
-
+server:
+  port: 8181
 spring:
-  application:
-    name: profile
+  datasource:
+    url: jdbc:mysql://localhost:3306/rentDB?createDatabaseIfNotExist=true
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
+  application:
+    name: profile
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:8082/oauth/check_token
+    client:
+      client-id: mobile
+      client-secret: pin
+
+#Config server - prod
+
+#spring:
+#  application:
+#    name: profile
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
