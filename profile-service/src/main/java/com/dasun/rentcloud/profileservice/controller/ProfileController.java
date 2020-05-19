@@ -3,8 +3,8 @@ package com.dasun.rentcloud.profileservice.controller;
 import com.dasun.rentcloud.commons.model.Customer;
 import com.dasun.rentcloud.profileservice.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -16,6 +16,7 @@ public class ProfileController {
     CustomerService customerService;
 
     @RequestMapping(value = "/profile", method = RequestMethod.POST)
+    @PreAuthorize("hasAuthority('create_profile')")
     public Customer save(@RequestBody Customer customer) {
         return customerService.save(customer);
     }
@@ -26,6 +27,8 @@ public class ProfileController {
     }
 
     @RequestMapping(value = "/profiles", method = RequestMethod.GET)
+    //@PreAuthorize("hasAuthority('read_profile')")
+    @PreAuthorize("hasRole('ROLE_operator')")
     public List<Customer> fetch() {
         return customerService.fetchAllProfiles();
     }
