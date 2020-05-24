@@ -9,8 +9,3 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: none
-   # properties:
-   #  hibernate:
-   #   dialect: org.hibernate.dialect.MySQL55Dialect
-  application:
-    name: customer
